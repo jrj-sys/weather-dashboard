@@ -49,6 +49,21 @@ header {
    padding: 20px 200px 20px 20px;
    border: 2px solid black;
 }
+.low {
+    background-color: green;
+}
+.moderate {
+    background-color: yellow;
+}
+.high {
+    background-color: orange;
+}
+.veryhigh {
+    background-color: red;
+}
+.extreme {
+    background-color: violet;
+}
 .forecast {
     display: flex;
     align-items: center;
