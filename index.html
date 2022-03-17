@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./assets/images/favicon (1).ico" rel="icon" type="image/x-icon" />
+    <link href="./assets/css/style.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+    <script src="./assets/js/script.js" defer></script>
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+
+    <main>
+        <!-- Search for a city container -->
+        <div class="searchcontainer"><h2>Search for a city:</h2>
+            <input type="text" class="searchbox" placeholder="San Diego">
+            <input type="submit" class="submit" value="Search">
+        </div>
+        <!-- City weather/info container -->
+        <!-- Dynamically generate <p> text with temp, wind, humidity, and UV index content -->
+        <div class="cityinfo">
+            <h2 class="cityname"></h2>
+            <p class="temp">Temp: </p>
+            <p class="wind">Wind: </p>
+            <p class="humidity">Humidity: </p>
+            <p class="uvindex">UV Index: </p>
+        </div>
+        <!-- 5-Day Forecast container -->
+        <!-- Dynamically generate 5 div containers with OneCallAPI data appended -->
+        <div class="forecast"><h3>5-Day Forecast:</h3>
+            <div class="day">
+                <h4>Date</h4>
+                <!-- little weather icon -->
+                <p class="temp">Temp:</p>
+                <p class="wind">Wind:</p>
+                <p class="humidity">Humidity:</p>
+            </div>
+            <div class="day">
+                <h4>Date</h4>
+                <!-- little weather icon -->
+                <p class="temp">Temp:</p>
+                <p class="wind">Wind:</p>
+                <p class="humidity">Humidity:</p>
+            </div>
+            <div class="day">
+                <h4>Date</h4>
+                <!-- little weather icon -->
+                <p class="temp">Temp:</p>
+                <p class="wind">Wind:</p>
+                <p class="humidity">Humidity:</p>
+            </div>
+            <div class="day">
+                <h4>Date</h4>
+                <!-- little weather icon -->
+                <p class="temp">Temp:</p>
+                <p class="wind">Wind:</p>
+                <p class="humidity">Humidity:</p></div>
+            <div class="day">
+                <h4>Date</h4>
+                <!-- little weather icon -->
+                <p class="temp">Temp:</p>
+                <p class="wind">Wind:</p>
+                <p class="humidity">Humidity:</p>
+            </div>
+        </div>
+        <!-- Recently searched container -->
+        <!-- Dynamically generate submit buttons that have innerHTML set to the city typed in .searchbox -->
+        <div class="recentsearch">
+            <button type="button" class="btn">Austin</button>
+            <button type="button" class="btn">Chicago</button>
+            <button type="button" class="btn">New York</button>
+            <button type="button" class="btn">Orlando</button>
+            <button type="button" class="btn">San Francisco</button>
+        </div>
+    </main>
+    
+</body>
+</html>

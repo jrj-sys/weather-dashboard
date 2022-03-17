@@ -1,0 +1,75 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    font-family: 'Fredoka', sans-serif;
+    position: relative;
+}
+header {
+    text-align: center;
+    color:white;
+    background-image: linear-gradient(to right, rgb(44, 44, 218), purple);
+    padding: 20px;
+}
+.searchcontainer {
+    display: inline-block;
+    margin-left: 30px;
+    border-bottom: 1px solid black;
+}
+.searchcontainer h2 {
+    text-transform: capitalize;
+    font-size: 20px;
+    margin: 10px;
+}
+.searchcontainer .searchbox {
+    font-family: 'Fredoka', sans-serif;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    outline: none;
+    border-style: solid;
+}
+.searchcontainer .submit {
+    font-family: 'Fredoka', sans-serif;
+    display: block;
+    margin: 0px 10px 10px 10px;
+    padding: 15px; 
+    border-radius: 10px;
+    outline: none;
+    border-style: none;
+    background-color: lightskyblue;
+    width: 90%;
+}
+.cityinfo {
+   float: right;
+   margin: 30px 150px 0px 0px;
+   padding: 20px 200px 20px 20px;
+   border: 2px solid black;
+}
+.forecast {
+    display: flex;
+    align-items: center;
+    padding: 30px 125px 0px 0px;
+    float: right;
+}
+.forecast .day {
+   padding: 0px 5px;
+   
+}
+.recentsearch {
+    margin: 10px 0px 0px 30px;
+    width: 70%;
+}
+.recentsearch button {
+    margin: 5px;
+    width: 30%;
+    border-radius: 10px;
+    outline: none;
+    border-style: none;
+    background-color: lightgrey;
+}
+
+  
