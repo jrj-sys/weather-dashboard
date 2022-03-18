@@ -7,6 +7,7 @@
 body {
     font-family: 'Fredoka', sans-serif;
     position: relative;
+    background-color: lightgray;
 }
 header {
     text-align: center;
@@ -72,6 +73,7 @@ header {
 }
 .forecast .day {
    padding: 0px 5px;
+   background-image: linear-gradient(to right, purple, rgb(49, 196, 245));
    
 }
 .recentsearch {
@@ -84,7 +86,7 @@ header {
     border-radius: 10px;
     outline: none;
     border-style: none;
-    background-color: lightgrey;
+    background-color: lightskyblue;
 }
 
   
