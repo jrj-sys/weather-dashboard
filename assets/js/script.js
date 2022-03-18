@@ -23,10 +23,10 @@ var getCityLatLon = function(city) {
                 var lat = data.coord.lat;
                 var lon = data.coord.lon;
                 console.log(data);
-                // take data.name (capitalized city name) and ID and set to localStorage 
+                // take data.name (capitalized city name) set to localStorage 
                 var location = data.name
-                // var locationId = data.id
                 localStorage.setItem(location, location)
+                
 
                 
                 $('.cityinfo .cityname').text(data.name);
@@ -34,9 +34,13 @@ var getCityLatLon = function(city) {
                 $('.cityinfo .temp').text('Temp: ' + data.main.temp + ' °F');
                 $('.cityinfo .wind').text('Wind: ' + data.wind.speed + ' MPH');
                 $('.cityinfo .humidity').text('Humidity: ' + data.main.humidity + '%');
+
+
                 getCityWeather(lat, lon);
             })
-        }
+        } else {
+            alert("Error: " + response.statusText);
+        };
     })
 }
 
@@ -64,6 +68,8 @@ var getCityWeather = function(lat, lon) {
                 
                 // dynamically update 5-day forecast container
                 for (var i = 0; i < data.daily.length; i++) {
+                    var date = new Date(data.daily[i].dt * 1000).toLocaleDateString("en-US");
+                    $('.date').eq(i).text(date);
                     $('.wicon').eq(i).attr('src', 'http://openweathermap.org/img/wn/' + data.daily[i].weather[0].icon + '.png');
                     $('.forecast .temp').eq(i).text('Temp: ' + data.daily[i].temp.day);
                     $('.forecast .wind').eq(i).text('Wind: ' + data.daily[i].wind_speed + ' MPH');
@@ -88,5 +94,6 @@ function getSavedSearches() {
     }
 }
 getSavedSearches();
+
 
 
