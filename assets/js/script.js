@@ -1,5 +1,3 @@
-// WHEN I search for a city
-// THEN I am presented with current and future conditions for that city and that city is added to the search history
 var getCityWeather = function(lat, lon) {
     // use getCityLatLon latitude and longitude values to input into OneCall API 
     var apiUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + lat +'&lon=' + lon +'&appid=6f634b702b3d948c5f118672eb3c519f&units=imperial';
@@ -46,6 +44,8 @@ var getCityLatLon = function(city) {
             response.json().then(function(data) {
                 var lat = data.coord.lat;
                 var lon = data.coord.lon;
+
+                // set City name & ID to localStorage for later saved searches
                 var cityName = data.name
                 var locationId = data.id
                 localStorage.setItem(cityName, locationId)
@@ -63,8 +63,6 @@ var getCityLatLon = function(city) {
 }
 
 
-
-
 $( '.submit' ).on("click", function() {
     var location = $( '.searchbox' ).val();
     if (location) {
@@ -73,12 +71,6 @@ $( '.submit' ).on("click", function() {
         alert("Please enter a city name!");
     };
 });
-
-
-
-
-// WHEN I view future weather conditions for that city
-// THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
 
 
 // WHEN I click on a city in the search history
