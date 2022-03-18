@@ -1,4 +1,4 @@
-#Weather Dashboard App
+# Weather Dashboard App
 ![Image of the app](https://github.com/jrj-sys/weather-dashboard/blob/main/assets/images/Screen%20Shot%202022-03-18%20at%203.34.51%20AM.png)
 
 ## Purpose: 
