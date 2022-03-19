@@ -27,9 +27,9 @@ var getCityLatLon = function(city) {
                 var location = data.name
                 localStorage.setItem(location, location)
                 
-
-                
+                var date = new Date(data.dt * 1000).toLocaleDateString('en-US');
                 $('.cityinfo .cityname').text(data.name);
+                $('.cityinfo .tdate').text(date);
                 $('#wicon').attr('src', 'http://openweathermap.org/img/wn/' + data.weather[0].icon + '.png');
                 $('.cityinfo .temp').text('Temp: ' + data.main.temp + ' °F');
                 $('.cityinfo .wind').text('Wind: ' + data.wind.speed + ' MPH');
@@ -65,10 +65,10 @@ var getCityWeather = function(lat, lon) {
                 } else {
                     $('.cityinfo #uv-index').addClass("extreme");
                 }
-                
+            
                 // dynamically update 5-day forecast container
                 for (var i = 0; i < data.daily.length; i++) {
-                    var date = new Date(data.daily[i].dt * 1000).toLocaleDateString("en-US");
+                    var date = new Date(data.daily[i].dt * 1000).toLocaleDateString('en-US');
                     $('.date').eq(i).text(date);
                     $('.wicon').eq(i).attr('src', 'http://openweathermap.org/img/wn/' + data.daily[i].weather[0].icon + '.png');
                     $('.forecast .temp').eq(i).text('Temp: ' + data.daily[i].temp.day);
