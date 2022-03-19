@@ -28,8 +28,9 @@ var getCityLatLon = function(city) {
                 localStorage.setItem(location, location)
                 
 
-                
+                var date = new Date(data.dt * 1000).toLocaleDateString("en-US");
                 $('.cityinfo .cityname').text(data.name);
+                $('.cityinfo .tdate').text(date);
                 $('#wicon').attr('src', 'http://openweathermap.org/img/wn/' + data.weather[0].icon + '.png');
                 $('.cityinfo .temp').text('Temp: ' + data.main.temp + ' °F');
                 $('.cityinfo .wind').text('Wind: ' + data.wind.speed + ' MPH');
