@@ -16,5 +16,12 @@ A weather dashboard app that retrieves weather data for user-selected cities.
 
 ## Contributors:
 ```md
-Jamel James: (https://github.com/jrj-sys)
+Jamel James: https://github.com/jrj-sys
 ```
+
+## Links:
+
+```md
+Deployed website: https://jrj-sys.github.io/weather-dashboard/
+```
+
